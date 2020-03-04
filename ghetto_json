@@ -16,7 +16,7 @@ def main(params_list):
     path = os.path.expanduser(params.pop('path'))
     changed = False
 
-    for key in params.keys():
+    for key in list(params):
       if key.startswith('_ansible_'):
         params.pop(key)
 
